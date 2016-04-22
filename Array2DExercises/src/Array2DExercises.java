@@ -2,22 +2,22 @@
 public class Array2DExercises {
 	
 		// return the total of all the values in the array.
-		public static int getTotal(int[][] a) {
+		public static int getTotal(int[][] arr) {
 			 int sum = 0;
-		        for(int i = 0; i < a.length; i++) {
-		                for(int j = 0; j < a[i].length; j++) {
-		                        sum += a[i][j];
+		        for(int i = 0; i < arr.length; i++) {
+		                for(int j = 0; j < arr[i].length; j++) {
+		                        sum += arr[i][j];
 		                }
 		        }
 		        return sum;
 		}
 		
 		// return the average of all the values in the array.
-		public static double getAverage(int[][] a) {
+		public static double getAverage(int[][] arr) {
 			 int sum = 0;
-		        for(int i = 0; i < a.length; i++) {
-		                for(int j = 0; j < a[i].length; j++) {
-		                        sum = (a[i][j])/(a[i].length);
+		        for(int i = 0; i < arr.length; i++) {
+		                for(int j = 0; j < arr[i].length; j++) {
+		                        sum = (arr[i][j])/(arr[i].length);
 		                }
 		        }
 		        return sum;
