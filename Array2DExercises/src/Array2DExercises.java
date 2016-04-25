@@ -119,8 +119,9 @@ public class Array2DExercises {
 
 
 	// return true if array is rectangular (n x m)
-	// find if it makes a square or not
+
 	public static boolean isRectangularArray(int[][] arr) {
+		
 		 boolean isSquare = true;
 
 	        if (arr != null) {
