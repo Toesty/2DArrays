@@ -66,23 +66,23 @@ public class Array2DExercisesTest {
 	}
 
 	@Test public void testGetAverage() {
-		assertEquals(8.5, Array2DExercises.getAverage(sorted), 0.00);
+		assertEquals(8.5, Array2DExercises.getAverage(sorted, 0, 0), 0.00);
 	}
 	
 	@Test public void testGetRowTotal() {
-		assertEquals(10, Array2DExercises.getRowTotal(sorted, 0));
+		assertEquals(10, Array2DExercises.getRowTotal(sorted, 0, 0));
 	}
 	
 	@Test public void testGetColumnTotal() {
-		assertEquals(28, Array2DExercises.getColumnTotal(sorted, 0));
+		assertEquals(28, Array2DExercises.getColumnTotal(sorted, 0, 0));
 	}
 	
 	@Test public void testGetHighestInRow() {
-		assertEquals(4, Array2DExercises.getHighestInRow(sorted, 0));
+		assertEquals(4, Array2DExercises.getHighestInRow(sorted, 0, 0));
 	}
 	
 	@Test public void testGetLowestInRow() {
-		assertEquals(1, Array2DExercises.getLowestInRow(sorted, 0));
+		assertEquals(1, Array2DExercises.getLowestInRow(sorted, 0, 0));
 	}
 	
 	@Test public void testGetHighestInColumn() {
