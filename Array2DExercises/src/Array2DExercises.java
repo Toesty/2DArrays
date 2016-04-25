@@ -14,14 +14,21 @@ public class Array2DExercises {
 		
 		// return the average of all the values in the array.
 		public static double getAverage(int[][] a) {
-			 int sum = 0;
-		        for(int i = 0; i < a.length; i++) {
-		                for(int j = 0; j < a[i].length; j++) {
-		                        sum = (a[i][j])/(a[i].length);
-		                }
-		        }
-		        return sum;
-		}
+			for(int i = 0; i < a.length; i++){
+			    double sum = 0;
+			    int numOfAssign = 0;
+			    System.out.printf("The Average for category:%d:",i+1);
+			    for(int j = 1; j < a[i].length-1; j++){
+			       numOfAssign++;
+			       sum = sum + a[i][j];
+			     }
+			    double average = sum / numOfAssign;
+			    a[i][a[i].length-1] = average;  
+
+			}
+			return a;
+		}  
+	
 		
 		// return the total of the values in the specified row.
 		public static int getRowTotal(int[][] a, int row) {
