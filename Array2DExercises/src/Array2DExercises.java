@@ -83,11 +83,130 @@ public class Array2DExercises {
 				sum += a[i][j];
 			}
 
+<<<<<<< HEAD
 		}
 		return sum;
 	}
 
 
+=======
+	// return the average of all the values in the array.
+		public static double getAverage(int[][] x, int rowCount, int colCount)
+		{
+		    int total = 0; 
+		    for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
+		    {
+		         for (int colIndex = 0; colIndex < colCount; colIndex++)
+		         {
+		             total += x[rowIndex][colIndex];   
+		         }
+		    }     
+		    double average = (total/(colCount*rowCount));
+		    System.out.println("The average is "+ average);
+		    return average; 
+		 }
+
+	// return the total of the values in the specified row.
+		public static int getRowTotal(int[][] x, int rowCount, int colCount)
+		{
+		    int rowTotal = 0; 
+		    int rowIndex = 0;
+		    for (rowIndex = 0; rowIndex < rowCount; rowIndex++)
+		    {
+		        for (int colIndex = 0; colIndex < colCount; colIndex++)
+		        {
+		            rowTotal += x [rowIndex][colIndex];      
+		        }
+		        System.out.println("The total for row " + (rowIndex+1) + " is " + rowTotal);
+		        rowTotal = 0;
+		    }   
+		    return rowTotal;
+		    }
+
+	// return the total of the values in the specified column.
+		public static int getColumnTotal(int[][] x, int rowCount, int colCount)
+		{
+		    int columnTotal = 0; 
+		    int rowIndex = 0;
+		    int colIndex = 0;
+		    for (colIndex = 0; colIndex < colCount; colIndex++)
+		    {
+		        for (rowIndex = 0; rowIndex < rowCount; rowIndex++)
+		        {             
+		            columnTotal += x [rowIndex][colIndex];          
+		        }
+		        System.out.println("The total for column " + (colIndex+1) + " is " + columnTotal);
+		        columnTotal = 0;
+		    }   
+		    return columnTotal; 
+		 }
+
+	// return the highest value in the specified row of the array.
+		public static int getHighestInRow (int[][] a, int rowCount, int colCount)
+		 {
+		     int highestInRow = a[0][0];
+
+		     for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
+		     {
+		       for (int colIndex = 0; colIndex < colCount; colIndex++)
+		       {
+		       if (a[rowIndex][colIndex]>highestInRow)
+		             highestInRow=a[rowIndex][colIndex];
+		       }
+		     System.out.println(highestInRow + " is the highest number in row " + (rowIndex+1) + ".");
+		     highestInRow = 0;
+		     }
+		     return highestInRow;
+		 }
+
+	// return the lowest value in the specified row of the array.
+		public static int getLowestInRow (int[][] a, int rowCount, int colCount)
+		{
+		     int lowestInRow = a[0][0];
+
+		     for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
+		     {
+		         lowestInRow = a[rowIndex][0];
+		       for (int colIndex = 0; colIndex < colCount; colIndex++)
+		       {
+		       if (a[rowIndex][colIndex]<lowestInRow)
+		             lowestInRow=a[rowIndex][colIndex];
+		       }
+		     System.out.println(lowestInRow + " is the lowest number in row " + (rowIndex+1) + ".");       
+
+		     }
+		    return lowestInRow;
+
+		}
+
+	// return the lowest value in the specified column of the array
+	public static int getHighestInColumn(int[][] a, int column) {
+		return -1;
+	}
+
+	// return the highest value in the specified column of the array
+	public static int getLowestInColumn(int[][] a, int column) {
+		return -1;
+	}
+
+	// return the diagonal sum, bottom left to top right
+	public static int getBottomLeftToTopRightDiagonalSum(int[][] a) {
+		for (int i = 0; i < a.length; i++) {
+
+		}
+		return -1;
+	}
+
+	// return the diagonal sum, top left to bottom right
+	public static int getTopLeftToBottomRightDiagonalSum(int[][] a) {
+		return -1;
+	}
+
+	// return true if the array is sorted low to high
+	public static boolean isArraySorted(int[][] a) {
+		return false;
+	}
+>>>>>>> 0319743b18d1f68f45ab4eb7f378bc0d1d698ff4
 
 	// return true if array is sorted high to low
 	public static boolean isArrayReversed(int[][] a) {
