@@ -72,11 +72,17 @@ public class Array2DExercises {
 
 	// return true if array is sorted high to low
 	public static boolean isArrayReversed(int[][] a) {
-		return false;
+		boolean sorted = true;
+
+		for (int i = 0; i < a.length - 1; i++) {
+		    if (a[i] > a[i+1]) {
+		        sorted = false;
+		        break;
+		    }
+		}
 	}
 
 	// return true if array is jagged
-
 	public static boolean isJaggedArray(int[][] arr) {
 		
 		boolean isJagged = false;
