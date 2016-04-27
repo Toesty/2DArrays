@@ -126,10 +126,11 @@ public class Array2DExercisesTest {
 	}
 	
 	@Test public void testIsRectangularArray() {
-		assertEquals(true, Array2DExercises.isRectangularArray(wide));
+
 		assertEquals(true, Array2DExercises.isRectangularArray(tall));
 		assertEquals(false, Array2DExercises.isRectangularArray(jagged));
 		assertEquals(true, Array2DExercises.isRectangularArray(squareneg));
 		assertEquals(true, Array2DExercises.isRectangularArray(squarepos));
 	}
 }
+

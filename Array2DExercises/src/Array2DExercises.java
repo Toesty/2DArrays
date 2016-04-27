@@ -1,19 +1,22 @@
 public class Array2DExercises {
 
-	public static double getAverage(int[][] a) {
-		double sum = 0;
-		double numOfAssign = 0;
-		double average = 0;
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 1; j < a[i].length - 1; j++) {
-				numOfAssign++;
-				sum = sum + a[i][j];
+		// return the average of all the values in the array.
+		public static double getAverage(int[][] a) {
+			double sum = 0;
+		    double numOfAssign = 0;
+		    double average = 0;
+			for(int i = 0; i < a.length; i++){
+			    for(int j = 1; j < a[i].length-1; j++){
+			       numOfAssign++;
+			       sum = sum + a[i][j];
+			     }
+			    average = sum / numOfAssign;
+			
 			}
 			average = sum / numOfAssign;
-
+			return average;
 		}
-		return average;
-	}
+		
 
 	// return the total of the values in the specified row.
 	public static int getRowTotal(int[][] a, int row) {
@@ -46,6 +49,7 @@ public class Array2DExercises {
 				}
 			
 		}
+		return false;
 	}
 
 	// return the total of all the values in the array.
@@ -57,6 +61,19 @@ public class Array2DExercises {
 			}
 		}
 		return sum;
+	}
+
+	// return the average of all the values in the array.
+	public static double getAverage(int[][] x, int rowCount, int colCount) {
+		int total = 0;
+		for (int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+			for (int colIndex = 0; colIndex < colCount; colIndex++) {
+				total += x[rowIndex][colIndex];
+			}
+		}
+		double average = (total / (colCount * rowCount));
+		System.out.println("The average is " + average);
+		return average;
 	}
 
 	// return the total of the values in the specified row.
@@ -149,11 +166,19 @@ public class Array2DExercises {
 
 	// return true if array is sorted high to low
 	public static boolean isArrayReversed(int[][] a) {
-		return false;
+		boolean sorted = true;
+
+		for (int i = 0; i < a.length - 1; i++) {
+			/*
+		    if (a[i] > a[i+1]) {
+		        sorted = false;
+		        break;
+		    }*/
+		}
+		return sorted;
 	}
 
 	// return true if array is jagged
-
 	public static boolean isJaggedArray(int[][] arr) {
 
 		boolean isJagged = false;
@@ -177,6 +202,7 @@ public class Array2DExercises {
 	// return true if array is square (n x n)
 	// just find if the boxes make a square or not
 	public static boolean isSquareArray(int[][] arr) {
+
 		boolean isSquare = false;
 
 		if (arr != null) {
@@ -190,13 +216,13 @@ public class Array2DExercises {
 				}
 			}
 		}
-
 		return isSquare;
+
 	}
 
 	// return true if array is rectangular (n x m)
-
 	public static boolean isRectangularArray(int[][] arr) {
+
 
 		boolean isSquare = true;
 
